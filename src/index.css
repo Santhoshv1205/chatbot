@@ -1,0 +1,128 @@
+:root {
+  --bg-color: #f3f3fd;
+  --sidebar-bg: #ffffff;
+  --bubble-user: #cfe3ff;
+  --bubble-bot: #f2f2f2;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+}
+
+.app-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: var(--sidebar-bg);
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.new-chat-btn {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.chat-history h4 {
+  margin: 0.5rem 0;
+}
+
+.chat-history p {
+  background-color: #f0f0f0;
+  padding: 0.4rem;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.main-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.toggle-sidebar-btn {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: var(--bg-color);
+}
+
+.chat-message {
+  max-width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background-color: var(--bubble-user);
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+  background-color: var(--bubble-bot);
+}
+
+.chat-footer {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  background-color: white;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-right: 0.5rem;
+}
+
+.chat-footer button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
